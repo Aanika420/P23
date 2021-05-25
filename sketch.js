@@ -7,13 +7,12 @@ const Body = Matter.Body;
 
 function preload()
 {
-	helicopterIMG=loadImage("helicopter.png")
-	packageIMG=loadImage("package.png")
+	helicopterIMG=loadImage("helicopter.png");
+	packageIMG=loadImage("package.png");
 }
 
 function setup() {
 	createCanvas(800, 700);
-	Canvas(400);
 	rectMode(CENTER);
 	
 	packageSprite=createSprite(width/2, 80, 10,10);
@@ -39,7 +38,7 @@ function setup() {
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
  	World.add(world, ground);
 
- 	boxPosition=width/2-100
+ 	boxPosition=width/2-100;
  	boxY=610;
 
  	boxleftSprite=createSprite(boxPosition, boxY, 20,100);
@@ -71,8 +70,8 @@ function draw() {
   rectMode(CENTER);
   background(0);
  
-  packageSprite.x= packageBody.position.x 
-  packageSprite.y= packageBody.position.y 
+  packageSprite.x= packageBody.position.x;
+  packageSprite.y= packageBody.position.y;
 
   if(keyDown(downArrowKey)){
 	  packageSprite.velocityX =0;
